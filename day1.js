@@ -64,70 +64,157 @@
 
 
 
+// 8-8-2025
 
-  
-8-8-2025
+//  // - 1
+
+//     let x  = 5
+//     let y  = x++ + ++x
+//     console.log(x,y)
+
+//  // - 2
+
+//     let total  = 50
+//         total += 30
+//         total /= 4
+//     console.log(total)
+
+//  // - 3
+
+//     console.log(10=="10")
+//     console.log(10==="10")
+    
+//  // - 4
+
+//     let age = 25
+//     let experience = 3
+//     console.log((age>=25)&&(experience>=3))
+
+//  // - 5
+
+//     console.log(typeof(5 + "5"));
+
+//  // - 6
+
+//     console.log(Boolean(0));
+//     console.log(Boolean("false"));
+//     console.log(Boolean([]));
+
+//  // - 7
+
+//     let str = Number("123")
+//     let num = 10
+//     let add = str + num
+//     console.log(add)
+
+//  // - 8
+
+//     console.log(Boolean({}));
+//     console.log(Boolean(null));
+
+//  // - 9
+
+//     let greeting = "Hello" + " " + "Students";
+//     console.log(greeting);
+
+//  // - 10
+
+//     let a = "10";
+//     let b = 10;
+//     console.log(a + b);
+//     console.log(Number(a) + b);
+
+
+ 11-8-2025
 
  // - 1
 
-    let x  = 5
-    let y  = x++ + ++x
-    console.log(x,y)
+ let Number = prompt("Enter Your Number")
 
- // - 2
+ if (Number > 0) {
+    console.log("Positive Number");
 
-    let total  = 50
-        total += 30
-        total /= 4
-    console.log(total)
+ } else if ( Number < 0) {
+     console.log("Negative Number");
 
- // - 3
+ } else {
+    console.log("Zero");
+ }
 
-    console.log(10=="10")
-    console.log(10==="10")
+  // - 2
+
+   let monthNumber = 7;
+
+  switch (monthNumber) {
+
+    case "1":console.log("January"); break;
+        
+    case "2": console.log("February"); break;
+        
+    case "3": console.log("March"); break;
+        
+    case "4": console.log("April"); break;
+
+    case "5":console.log("May"); break;
     
- // - 4
+    case "6": console.log("June"); break;
+       
+    case 7:console.log("July"); break;
+        
+    case 8:  console.log("August"); break;
+      
+    case 9:console.log("September"); break;
+        
+    case "10": console.log("October"); break;
+        
+    case "11": console.log("November"); break;
+          
+    case "12": console.log("December"); break;
+        
+    default:
+        console.log("Invalid month number");
+}
 
-    let age = 25
-    let experience = 3
-    console.log((age>=25)&&(experience>=3))
 
- // - 5
 
-    console.log(typeof(5 + "5"));
+// - 3
 
- // - 6
+let number = 7;
 
-    console.log(Boolean(0));
-    console.log(Boolean("false"));
-    console.log(Boolean([]));
+for (let i = 1; i <= 10; i++) {
+    console.log(`${number} x ${i} = ${number * i}`);
+}
 
- // - 7
+// - 4
 
-    let str = Number("123")
-    let num = 10
-    let add = str + num
-    console.log(add)
+let colors = ["red", "green", "blue", "yellow", "Black"];
 
- // - 8
+for (let color of colors) {
+    console.log(color.toUpperCase());
+}
 
-    console.log(Boolean({}));
-    console.log(Boolean(null));
+// - 5
 
- // - 9
+let car = {
+  brand: "Mercedes-Benz",
+  model: "S-Class",
+  year: 2025
+};
 
-    let greeting = "Hello" + " " + "Students";
-    console.log(greeting);
+for (let property in car) {
+  console.log(property + ": " + car[property]);
+}
 
- // - 10
 
-    let a = "10";
-    let b = 10;
-    console.log(a + b);
-    console.log(Number(a) + b);
 
-    
-   
+
+
+
+
+
+
+
+
      
 
  
