@@ -62,38 +62,64 @@
 // let num2 = num1++ + --num1
 // console.log(num1,num2)
 
+
+
+
   
 8-8-2025
+
+ // - 1
 
     let x  = 5
     let y  = x++ + ++x
     console.log(x,y)
+
+ // - 2
 
     let total  = 50
         total += 30
         total /= 4
     console.log(total)
 
+ // - 3
+
     console.log(10=="10")
     console.log(10==="10")
+    
+ // - 4
 
-    // let age = 25
-    // let experience = 3
+    let age = 25
+    let experience = 3
+    console.log((age>=25)&&(experience>=3))
+
+ // - 5
 
     console.log(typeof(5 + "5"));
+
+ // - 6
 
     console.log(Boolean(0));
     console.log(Boolean("false"));
     console.log(Boolean([]));
 
-    // result = int("123") + 10
-    // console.log(result)
+ // - 7
+
+    let str = Number("123")
+    let num = 10
+    let add = str + num
+    console.log(add)
+
+ // - 8
 
     console.log(Boolean({}));
     console.log(Boolean(null));
 
+ // - 9
+
     let greeting = "Hello" + " " + "Students";
     console.log(greeting);
+
+ // - 10
 
     let a = "10";
     let b = 10;
