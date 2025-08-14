@@ -203,80 +203,166 @@
 
 // for (let property in car) {
 //   console.log(property + ": " + car[property]);
+// // }
+
+
+//  12-8-2025
+
+//  // - 1
+
+//  function isMagicNumber(num) {
+//   if (num % 3 === 0 && num % 7 === 0) {
+//     console.log("* It's magic!");
+//   } else {
+//     console.log("Not magic");
+//   }
 // }
 
+// isMagicNumber(21);
+// isMagicNumber(10);
 
- 12-8-2025
+// // - 2
+
+// let shoutName = function(name) {
+//     console.log(name.toUpperCase() + "!!!");
+// };
+
+// shoutName("chris");
+
+// // - 3
+
+// const tellFortune = (name, place = "Unknown") => {
+//     console.log(`Dear ${name}, you will travel to ${place} soon!`);
+// };
+
+// tellFortune("Chris", "London");
+// tellFortune("James");
+
+// // - 4
+
+// function scopeDetective() {
+//     if (true) {
+//         var varVariable = "I am var!";
+//         let letVariable = "I am let!";
+//         const constVariable = "I am const!";
+
+//         console.log("Inside block - var:", varVariable);
+//         console.log("Inside block - let:", letVariable);
+//         console.log("Inside block - const:", constVariable); 
+//     }
+
+//     console.log("Outside block - var:", varVariable); 
+
+//     try {
+//         console.log("Outside block - let:", letVariable); 
+//     } catch (error) {
+//         console.log("Outside block - let: Not accessible (" + error.message + ")");
+//     }
+
+//     try {
+//         console.log("Outside block - const:", constVariable);
+//     } catch (error) {
+//         console.log("Outside block - const: Not accessible (" + error.message + ")");
+//     }
+// }
+
+// scopeDetective();
+
+// // - 5
+
+// const sumNumbers = (a, b) => a + b;
+
+// console.log(sumNumbers(1, 6));
+
+
+
+ 13-8-2025
 
  // - 1
 
- function isMagicNumber(num) {
-  if (num % 3 === 0 && num % 7 === 0) {
-    console.log("* It's magic!");
-  } else {
-    console.log("Not magic");
-  }
+
+function sayHello() {
+    console.log('Hello World');
+}
+sayHello();
+
+
+let fruits = ['Apple', 'Banana', 'Mango', 'Orange', 'Grapes'];
+console.log(fruits[0]); 
+console.log(fruits[fruits.length - 1]);
+
+
+let student = {
+    name: 'John',
+    age: 20
+};
+console.log(student.name);
+
+
+for (let letter of 'CHRISTOBER') {
+    console.log(letter);
 }
 
-isMagicNumber(21);
-isMagicNumber(10);
 
-// - 2
+(function() {
+    console.log('I am learning JavaScript');
+})();
 
-let shoutName = function(name) {
-    console.log(name.toUpperCase() + "!!!");
-};
 
-shoutName("chris");
+function calculate(a, b, callback) {
+
+    console.log("Sum:", a + b);
+    
+    callback(a, b);
+}
+
+function logDifference(x, y) {
+    console.log("Difference:", x - y);
+}
+
+calculate(10, 4, logDifference);
+
+ // - 2
+
+ const power = a => b => a ** b;
+
+ console.log(power(2)(3));  
+console.log(power(5)(2));   
+console.log(power(10)(0)); 
+console.log(power(3)(4));  
 
 // - 3
 
-const tellFortune = (name, place = "Unknown") => {
-    console.log(`Dear ${name}, you will travel to ${place} soon!`);
-};
-
-tellFortune("Chris", "London");
-tellFortune("James");
+(function(shopName, discount) {
+    alert(`Welcome to ${shopName}! Get ${discount}% off today!`);
+})("SuperMart", 20);
 
 // - 4
 
-function scopeDetective() {
-    if (true) {
-        var varVariable = "I am var!";
-        let letVariable = "I am let!";
-        const constVariable = "I am const!";
-
-        console.log("Inside block - var:", varVariable);
-        console.log("Inside block - let:", letVariable);
-        console.log("Inside block - const:", constVariable); 
-    }
-
-    console.log("Outside block - var:", varVariable); 
-
-    try {
-        console.log("Outside block - let:", letVariable); 
-    } catch (error) {
-        console.log("Outside block - let: Not accessible (" + error.message + ")");
-    }
-
-    try {
-        console.log("Outside block - const:", constVariable);
-    } catch (error) {
-        console.log("Outside block - const: Not accessible (" + error.message + ")");
-    }
+function* colorGenerator() {
+    yield 'red';
+    yield 'green';
+    yield 'blue';
 }
 
-scopeDetective();
+const colors = colorGenerator();
+
+console.log(colors.next()); 
+console.log(colors.next());
+console.log(colors.next()); 
+console.log(colors.next());
 
 // - 5
 
-const sumNumbers = (a, b) => a + b;
+let word = 'developer';
+for (let letter of word) {
+    console.log(letter);
+}
 
-console.log(sumNumbers(1, 6));
-
-
- 
-
+let laptop = { brand: 'Dell', price: 45000, isNew: true };
+for (let key in laptop) {
+    console.log(laptop[key]);
+}
 
 
 
