@@ -276,93 +276,263 @@
 
 
 
- 13-8-2025
+//  13-8-2025
 
- // - 1
-
-
-function sayHello() {
-    console.log('Hello World');
-}
-sayHello();
+//  // - 1
 
 
-let fruits = ['Apple', 'Banana', 'Mango', 'Orange', 'Grapes'];
-console.log(fruits[0]); 
-console.log(fruits[fruits.length - 1]);
+// function sayHello() {
+//     console.log('Hello World');
+// }
+// sayHello();
 
 
-let student = {
-    name: 'John',
-    age: 20
-};
-console.log(student.name);
+// let fruits = ['Apple', 'Banana', 'Mango', 'Orange', 'Grapes'];
+// console.log(fruits[0]); 
+// console.log(fruits[fruits.length - 1]);
 
 
-for (let letter of 'CHRISTOBER') {
-    console.log(letter);
-}
+// let student = {
+//     name: 'John',
+//     age: 20
+// };
+// console.log(student.name);
 
 
-(function() {
-    console.log('I am learning JavaScript');
-})();
+// for (let letter of 'CHRISTOBER') {
+//     console.log(letter);
+// }
 
 
-function calculate(a, b, callback) {
+// (function() {
+//     console.log('I am learning JavaScript');
+// })();
 
-    console.log("Sum:", a + b);
+
+// function calculate(a, b, callback) {
+
+//     console.log("Sum:", a + b);
     
-    callback(a, b);
-}
+//     callback(a, b);
+// }
 
-function logDifference(x, y) {
-    console.log("Difference:", x - y);
-}
+// function logDifference(x, y) {
+//     console.log("Difference:", x - y);
+// }
 
-calculate(10, 4, logDifference);
+// calculate(10, 4, logDifference);
 
- // - 2
+//  // - 2
 
- const power = a => b => a ** b;
+//  const power = a => b => a ** b;
 
- console.log(power(2)(3));  
-console.log(power(5)(2));   
-console.log(power(10)(0)); 
-console.log(power(3)(4));  
+//  console.log(power(2)(3));  
+// console.log(power(5)(2));   
+// console.log(power(10)(0)); 
+// console.log(power(3)(4));  
+
+// // - 3
+
+// (function(shopName, discount) {
+//     alert(`Welcome to ${shopName}! Get ${discount}% off today!`);
+// })("SuperMart", 20);
+
+// // - 4
+
+// function* colorGenerator() {
+//     yield 'red';
+//     yield 'green';
+//     yield 'blue';
+// }
+
+// const colors = colorGenerator();
+
+// console.log(colors.next()); 
+// console.log(colors.next());
+// console.log(colors.next()); 
+// console.log(colors.next());
+
+// // - 5
+
+// let word = 'developer';
+// for (let letter of word) {
+//     console.log(letter);
+// }
+
+// let laptop = { brand: 'Dell', price: 45000, isNew: true };
+// for (let key in laptop) {
+//     console.log(laptop[key]);
+// }
+
+
+
+ 14-8-2025
+
+//  Spread & Rest Operator
+
+ // - 1 
+
+let arr1 = ['a', 'b'];
+let arr2 = ['c', 'd'];
+
+let merged = [...arr1, ...arr2];
+
+console.log(merged);
+
+// - 2
+
+let person = { name: 'John', age: 25 };
+
+let clonePerson = { ...person };
+
+console.log(clonePerson);
 
 // - 3
 
-(function(shopName, discount) {
-    alert(`Welcome to ${shopName}! Get ${discount}% off today!`);
-})("SuperMart", 20);
+let obj1 = { x: 1, y: 2 };
+let obj2 = { y: 3, z: 4 };
+
+let merged1 = { ...obj1, ...obj2 };
+console.log(merged1);
 
 // - 4
 
-function* colorGenerator() {
-    yield 'red';
-    yield 'green';
-    yield 'blue';
+function sumAll(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
 }
 
-const colors = colorGenerator();
-
-console.log(colors.next()); 
-console.log(colors.next());
-console.log(colors.next()); 
-console.log(colors.next());
+console.log(sumAll(1, 2, 3, 4, 5));
+console.log(sumAll(10, 20));       
+console.log(sumAll());
 
 // - 5
 
-let word = 'developer';
-for (let letter of word) {
-    console.log(letter);
+function logArguments(a, b, ...rest) {
+  console.log("First argument:", a);
+  console.log("Second argument:", b);
+  console.log("Remaining arguments:", rest);
 }
 
-let laptop = { brand: 'Dell', price: 45000, isNew: true };
-for (let key in laptop) {
-    console.log(laptop[key]);
-}
+
+logArguments(10, 20, 30, 40, 50, 60);
+
+// Array Destructuring
+
+// - 6
+
+let colors = ['red', 'green', 'blue'];
+
+let [c1, c2] = colors;
+
+console.log(c1); 
+console.log(c2);
+
+// - 7
+
+let items = ['pen', 'pencil', 'eraser', 'sharpener'];
+let [first, , , last] = items;
+
+console.log(first); 
+console.log(last); 
+
+// - 8
+
+let nums = [10, 20, 30, 40, 50];
+let [n1, n2, ...rest] = nums;
+
+console.log(n1);   
+console.log(n2);   
+console.log(rest); 
+
+// - 9
+
+let vehicles = ['car', ['bike', ['bus', 'train']]];
+let [, [, [bus]]] = vehicles;
+
+console.log(bus); 
+
+// - 10
+
+let a = 5, b = 10;
+[a, b] = [b, a];
+
+console.log(a); 
+console.log(b); 
+
+// Array Methods - Manipulation
+
+// - 11
+
+let arr = [1, 2, 3];
+arr1.push(4, 5);
+console.log(arr1);
+
+// - 12
+
+let arr3 = [1, 2, 3];
+arr2.pop();
+arr2.pop();
+console.log(arr3); 
+
+// - 13
+
+let arr4 = [3, 4, 5];
+arr3.unshift(1, 2);
+console.log(arr4); 
+
+// - 14
+
+let arr5 = [1, 2, 3, 4];
+arr4.shift();
+console.log(arr5); 
+
+// - 15
+
+let arr6 = [10, 20, 30, 40, 50];
+arr5.splice(1, 2, 99, 100); 
+console.log(arr6); 
+
+// Array Methods - Merge, Slice, Flat, Fill
+
+// - 16
+
+let arr7 = [1, 2];
+let arr8 = [3, 4];
+let merged3 = arr7.concat(arr8);
+console.log(merged3); 
+
+// - 17
+
+let nums1 = [5, 6, 7, 8, 9];
+let sliced = nums1.slice(1, 3);
+console.log(sliced); 
+
+// - 18
+
+let nested = [1, [2, [3, [4]]]];
+let flatArray = nested.flat(Infinity);
+console.log(flatArray); 
+
+// - 19
+
+let filled = new Array(5).fill('Hello');
+console.log(filled);
+
+// - 20
+
+let deepArr = [1, 2, 3, [4, [5, 6]]];
+let flatArr = deepArr.flat(Infinity);
+console.log(flatArr); 
+
+
+
+
+
+
+
+
+
+
 
 
 
