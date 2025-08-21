@@ -525,107 +525,164 @@
 // console.log(flatArr); 
 
 
- 19-8-2025
+//  19-8-2025
 
-  // - 1
+//   // - 1
 
-let nums = [45, 12, 3, 99, 23, 8];
+// let nums = [45, 12, 3, 99, 23, 8];
 
-let asc = [...nums].sort((a, b) => a - b);
+// let asc = [...nums].sort((a, b) => a - b);
 
-console.log("Ascending:", asc);
+// console.log("Ascending:", asc);
 
-let desc = [...nums].sort((a, b) => b - a);
+// let desc = [...nums].sort((a, b) => b - a);
 
-console.log("Descending:", desc)
+// console.log("Descending:", desc)
   
-  // - 2
+//   // - 2
 
-let colors = ["red", "blue", "green", "yellow"];
+// let colors = ["red", "blue", "green", "yellow"];
 
-if (!colors.includes("pink")) {
-  colors.push("pink");
+// if (!colors.includes("pink")) {
+//   colors.push("pink");
+// }
+// console.log(colors);
+  
+//   // - 3
+
+// let arr = ["HTML", "CSS", "JS"];
+
+// console.log("join('-'):", arr.join("-"));   
+
+// console.log("toString():", arr.toString());
+  
+//   // - 4
+
+// let items = ["pen", "book", "pen", "pencil", "pen"];
+
+// console.log("First index:", items.indexOf("pen"));  
+
+// console.log("Last index:", items.lastIndexOf("pen"));
+  
+//   // - 5
+
+// let students = ["Kamal", "Sita", "Ravi"];
+
+// students.forEach(name => console.log(name));
+
+// let newArr = students.map(name => "Student: " + name);
+
+// console.log(newArr);
+  
+//   // - 6
+  
+//   let products = [
+//   {name: "Laptop", price: 45000},
+//   {name: "Phone", price: 20000},
+//   {name: "Tablet", price: 20000},
+//   {name: "Monitor", price: 12000}
+// ];
+
+// let filtered = products.filter(p => p.price === 20000);
+
+// console.log("Filtered:", filtered);
+
+// let found = products.find(p => p.price === 20000);
+
+// console.log("Found:", found);
+
+//   // - 7
+
+// let numbers = [5, 10, 15, 20, 25];
+
+// let sum = numbers.reduce((acc, num) => acc + num, 0);
+
+// console.log("Sum:", sum);
+  
+//   // - 8
+
+// let ages = [22, 18, 25, 30, 16];
+
+// console.log("Any under 18?", ages.some(age => age < 18)); 
+// console.log("All above 15?", ages.every(age => age > 15));
+
+//  // - 9
+
+// let str = "Hello World";
+
+// let replaced = str.replace("World", "JavaScript");
+// console.log("Replaced:", replaced);
+
+// let sliced = str.slice(0, 5);
+// console.log("Sliced:", sliced);
+
+//  // - 10
+
+// let sentence = "I love coding";
+
+// let words = sentence.split(" ");
+
+// console.log("Split:", words);
+// console.log("Repeat:", sentence.repeat(3));
+
+
+ 21-8-2025
+
+let num1 = "10"; 
+let num2 = "5";  
+let operation = "multiply"; 
+
+num1 = Number(num1);
+num2 = Number(num2);
+
+function calculate(a, b, op) {
+  let result;
+
+  switch (op) {
+    case "add":
+      result = a + b;
+      break;
+    case "subtract":
+      result = a - b;
+      break;
+    case "multiply":
+      result = a * b;
+      break;
+    case "divide":
+      if (b !== 0) {
+        result = a / b;
+      } else {
+        return "Error: Cannot divide by zero!";
+      }
+      break;
+    default:
+      return "Invalid operation!";
+  }
+  return `The result of ${op}ing ${a} and ${b} is: ${result}`;
 }
-console.log(colors);
-  
-  // - 3
+console.log(calculate(num1, num2, operation));
 
-let arr = ["HTML", "CSS", "JS"];
 
-console.log("join('-'):", arr.join("-"));   
 
-console.log("toString():", arr.toString());
-  
-  // - 4
 
-let items = ["pen", "book", "pen", "pencil", "pen"];
 
-console.log("First index:", items.indexOf("pen"));  
 
-console.log("Last index:", items.lastIndexOf("pen"));
-  
-  // - 5
 
-let students = ["Kamal", "Sita", "Ravi"];
 
-students.forEach(name => console.log(name));
 
-let newArr = students.map(name => "Student: " + name);
 
-console.log(newArr);
-  
-  // - 6
-  
-  let products = [
-  {name: "Laptop", price: 45000},
-  {name: "Phone", price: 20000},
-  {name: "Tablet", price: 20000},
-  {name: "Monitor", price: 12000}
-];
 
-let filtered = products.filter(p => p.price === 20000);
 
-console.log("Filtered:", filtered);
 
-let found = products.find(p => p.price === 20000);
 
-console.log("Found:", found);
 
-  // - 7
 
-let numbers = [5, 10, 15, 20, 25];
 
-let sum = numbers.reduce((acc, num) => acc + num, 0);
 
-console.log("Sum:", sum);
-  
-  // - 8
 
-let ages = [22, 18, 25, 30, 16];
 
-console.log("Any under 18?", ages.some(age => age < 18)); 
-console.log("All above 15?", ages.every(age => age > 15));
 
- // - 9
 
-let str = "Hello World";
-
-let replaced = str.replace("World", "JavaScript");
-console.log("Replaced:", replaced);
-
-let sliced = str.slice(0, 5);
-console.log("Sliced:", sliced);
-
- // - 10
-
-let sentence = "I love coding";
-
-let words = sentence.split(" ");
-
-console.log("Split:", words);
-console.log("Repeat:", sentence.repeat(3));
-
- 
 
    
 
