@@ -626,41 +626,284 @@
 // console.log("Repeat:", sentence.repeat(3));
 
 
- 21-8-2025
+//  21-8-2025
 
-let num1 = "10"; 
-let num2 = "5";  
-let operation = "multiply"; 
+// let num1 = "10"; 
+// let num2 = "5";  
+// let operation = "multiply"; 
 
-num1 = Number(num1);
-num2 = Number(num2);
+// num1 = Number(num1);
+// num2 = Number(num2);
 
-function calculate(a, b, op) {
-  let result;
+// function calculate(a, b, op) {
+//   let result;
 
-  switch (op) {
-    case "add":
-      result = a + b;
-      break;
-    case "subtract":
-      result = a - b;
-      break;
-    case "multiply":
-      result = a * b;
-      break;
-    case "divide":
-      if (b !== 0) {
-        result = a / b;
-      } else {
-        return "Error: Cannot divide by zero!";
-      }
-      break;
-    default:
-      return "Invalid operation!";
-  }
-  return `The result of ${op}ing ${a} and ${b} is: ${result}`;
+//   switch (op) {
+//     case "add":
+//       result = a + b;
+//       break;
+//     case "subtract":
+//       result = a - b;
+//       break;
+//     case "multiply":
+//       result = a * b;
+//       break;
+//     case "divide":
+//       if (b !== 0) {
+//         result = a / b;
+//       } else {
+//         return "Error: Cannot divide by zero!";
+//       }
+//       break;
+//     default:
+//       return "Invalid operation!";
+//   }
+//   return `The result of ${op}ing ${a} and ${b} is: ${result}`;
+// }
+// console.log(calculate(num1, num2, operation));
+
+
+22-8-2025
+
+//   - 1
+
+let paragraphs = document.getElementsByTagName("p");
+console.log(paragraphs);
+
+//   - 2
+
+let highlights = document.getElementsByClassName("highlight");
+console.log(highlights);
+
+//   - 3
+
+const mainContentElement = document.getElementById("main-content");
+
+if (mainContentElement) {
+
+    console.log(mainContentElement.innerHTML);
+} else {
+    console.log("Element with ID 'main-content' not found.");
 }
-console.log(calculate(num1, num2, operation));
+
+//   - 4
+
+const firstH1 = document.querySelector('h1');
+if (firstH1) {
+  console.log(firstH1.textContent);
+} else {
+  console.log('No <h1> element found in the document.');
+}
+
+//   - 5
+let body = document.querySelector(".body")
+
+body.style.backroundcolor =  "red"
+
+//   - 6
+
+const footerElement = document.querySelector('#footer');
+
+if (footerElement) {
+  console.log(footerElement.tagName);
+} else {
+  console.log("Element with ID 'footer' not found.");
+}
+
+//   - 7
+
+const cardElements = document.querySelectorAll('.card');
+
+const numberOfCards = cardElements.length;
+
+console.log(`Number of elements with class 'card': ${numberOfCards}`);
+
+//   - 8
+
+let ul = document.querySelectorAll("ul > li")
+
+console.log(ul);
+ul.forEach((c)=>{
+console.log(c.innerHTML);
+})
+
+//   - 9
+
+let random = document.querySelectorAll(".random")
+console.log(random);
+
+random.forEach((c)=>{
+   c.style.borde ="2px solid black"
+})
+
+//   - 10
+
+const boxElement = document.querySelector('.box');
+if (boxElement) {
+  const parentOfBox = boxElement.parentElement;
+
+  console.log(parentOfBox);
+
+} else {
+  console.log('Element with class "box" not found.');
+}
+
+//   - 11
+
+const contentElement = document.getElementById('content')
+
+if (contentElement) {
+  const parent = contentElement.parentElement;
+
+  if (parent) {
+
+    console.log(parent.tagName);
+  } else {
+    console.log('The element with ID "content" has no parent element.');
+  }
+} else {
+  console.log('Element with ID "content" not found.');
+}
+
+//   - 12
+
+const wrapperDiv = document.querySelector('div.wrapper');
+
+if (wrapperDiv) {
+    const childCount = wrapperDiv.childElementCount;
+    console.log(`The div with class "wrapper" has ${childCount} child elements.`);
+} else {
+    console.log('No div with class "wrapper" found in the document.');
+}
+
+//   - 13
+
+const ulElement = document.querySelector('ul.list');
+
+const firstChildElement = ulElement.firstElementChild;
+
+console.log(firstChildElement);
+
+//   - 14
+
+const sidebarElement = document.querySelector('.sidebar');
+
+if (sidebarElement) {
+    const lastChild = sidebarElement.lastElementChild;
+    if (lastChild) {
+        console.log("Last child element of sidebar:", lastChild);
+    } else {
+        console.log("The sidebar element has no child elements.");
+    }
+} else {
+    console.log("An element with the class 'sidebar' was not found in the document.");
+}
+
+//   - 15
+
+  const parentDiv = document.querySelector('.parent');
+    if (parentDiv) {
+    const childElements = parentDiv.children;
+
+    for (let i = 0; i < childElements.length; i++) {
+        console.log(childElements[i]);
+    }
+
+} else {
+    console.log("Parent div with class 'parent' not found.");
+}
+
+//   - 16
+
+const itemElement = document.querySelector('.item');
+
+if (itemElement) {
+
+  const nextSiblingElement = itemElement.nextElementSibling;
+
+  if (nextSiblingElement) {
+    console.log("The next element sibling is:", nextSiblingElement);
+  } else {
+    console.log("There is no next element sibling for this element.");
+  }
+
+} else {
+  console.log("No element with the class 'item' was found.");
+}
+
+//   - 17
+
+const currentItem = document.querySelector('.item');
+
+const previousElement = currentItem.previousElementSibling;
+
+if (previousElement) {
+  console.log("The previous element is:", previousElement);
+} else {
+  console.log("No previous element found for this item.");
+}
+
+//   - 18
+
+let firstChild = document.querySelector(".menu-items")
+
+let firstval = firstChild.innerHTML
+console.log(firstval)
+
+let moveSecond = firstChild.nextElementSibling
+console.log(moveSecond)
+
+moveSecond.innerHTML = firstval
+//   - 19
+
+const mainSection = document.getElementById('main');
+
+if (mainSection) {
+
+    const firstChild = mainSection.firstElementChild;
+
+    const lastChild = mainSection.lastElementChild;
+
+    if (firstChild) {
+        console.log("Tag name of the first child:", firstChild.tagName);
+    } else {
+        console.log("The 'main' section has no first child element.");
+    }
+
+    if (lastChild) {
+        console.log("Tag name of the last child:", lastChild.tagName);
+    } else {
+        console.log("The 'main' section has no last child element.");
+    }
+} else {
+    console.log("No section with ID 'main' found.");
+}
+
+//   - 20
+
+let span = document.querySelector("span")
+console.log(span.children);
+
+let allchild = span.children
+console.log(allchild)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
